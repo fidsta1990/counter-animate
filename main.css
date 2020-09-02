@@ -7,6 +7,81 @@
 }
 
 body {
-  background: green;
+  background: #fcfcfc;
   font-family: "Krona One", sans-serif;
+}
+
+.header {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.1)),
+    url("./pexels-henry-&-co-2341290.jpg");
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.4s linear;
+}
+
+.header h1 {
+  position: absolute;
+  top: 20%;
+  color: rgb(63, 62, 62);
+}
+
+.container {
+  border: transparent;
+  border-radius: 0.6rem;
+  min-height: 30vh;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 10px 15px rgb(77, 76, 76);
+  z-index: 4;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  transition: all 0.4s linear;
+}
+
+.icon-block {
+  display: grid;
+  /* height: 7rem; */
+  justify-items: center;
+}
+
+.icon-block ion-icon {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.icon-block .counter {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 60vh;
+    max-width: 420px;
+  }
+
+  .icon-block:nth-child(1) {
+    border-bottom: 3px solid black;
+    padding-bottom: 1rem;
+  }
+  .icon-block:nth-child(2) {
+    border-bottom: 3px solid black;
+    padding-bottom: 1rem;
+  }
+  .header h1 {
+    position: absolute;
+    top: 5%;
+    color: rgb(63, 62, 62);
+  }
 }
